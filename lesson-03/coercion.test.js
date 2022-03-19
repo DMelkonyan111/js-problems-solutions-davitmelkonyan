@@ -1,5 +1,4 @@
-const {customParseInt} = require('./coercion, parseInt logic');
-const {customParseFloat} = require('./coercion, parseFloat logic');
+const {customParseInt, customParseFloat} = require('./coercion');
 
 describe('parseInt function logics', () => {
     test('parseInt("11.5")', () => {

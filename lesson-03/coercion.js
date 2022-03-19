@@ -1,3 +1,19 @@
+function customParseInt(val) {
+    val = val.trim().split('');
+    let result = '';
+
+    for (let i = 0; i < val.length; i++) {
+        if (Number(val[i])) {
+            result += val[i];
+        } else {
+            break;
+        }
+    }
+
+    return (result != '') ? +result : NaN;
+}
+
+
 function customParseFloat(val) {
     val = val.trim().split('');
     let result = '';
@@ -17,8 +33,7 @@ function customParseFloat(val) {
     return (result == '') ? NaN : +result;
 }
 
-console.log(customParseFloat('11.5a'))
-
 module.exports = {
-    customParseFloat
+    customParseFloat,
+    customParseInt
 }
